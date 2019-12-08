@@ -30,7 +30,7 @@ abstract public class BaseFilter{
 
     public BaseFilter getNextFilter() {
         return nextFilter;
-    }
+    }//
 
     public void setNextFilter(BaseFilter nextFilter) {
         this.nextFilter = nextFilter;
