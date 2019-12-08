@@ -18,6 +18,6 @@ public class Main {
         BaseFilter filter = new PriceFilter(new Pair<>(40d, 45d));
         filter.addFilter(new ColorFilter("red"));
         //sizeFilter.setProductList(productList);
-        System.out.println(filter.find(productList).second.toString());
+        System.out.println(filter.find(productList).toString());
     }
 }

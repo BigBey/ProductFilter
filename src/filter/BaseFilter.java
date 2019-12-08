@@ -18,21 +18,13 @@ abstract public class BaseFilter{
         return nextFilter;
     }
 
-    public abstract Pair<Boolean, ProductList> find(ProductList productList);
+    public abstract ProductList find(ProductList productList);
 
-    public Pair<Boolean, ProductList> checkNext(ProductList productList){
+    public ProductList checkNext(ProductList productList){
         if(nextFilter == null){
-            return new Pair<>(false, productList);
+            return productList;
         }
 
         return nextFilter.find(productList);
-    }
-
-    public BaseFilter getNextFilter() {
-        return nextFilter;
-    }//
-
-    public void setNextFilter(BaseFilter nextFilter) {
-        this.nextFilter = nextFilter;
     }
 }

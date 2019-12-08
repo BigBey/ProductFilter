@@ -16,7 +16,7 @@ public class PriceFilter extends BaseFilter{
     }
 
     @Override
-    public Pair<Boolean, ProductList> find(ProductList productList) {
+    public ProductList find(ProductList productList) {
         ProductList resultList = new ProductList();
         for (Product product:
                 productList) {
@@ -25,7 +25,7 @@ public class PriceFilter extends BaseFilter{
             }
         }
         if(resultList.isEmpty()){
-            return new Pair<>(false, null);
+            return null;
         }else{
             return checkNext(resultList);
         }
